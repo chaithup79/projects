@@ -15,7 +15,6 @@ public class tae {
 		List<Integer> list2 = new LinkedList<>();
 		List<Integer> l1=List.of(1,2,3,4);
 		list1.add(l1);
-		
 		int arr[]= {1,2,3,4,1,2,3,4,1,1,2,3,4,1,1,2,3,4};
 		
 		String s="heyyyyaa";
