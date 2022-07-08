@@ -53,7 +53,6 @@ public class userService {
 		List<user> users=repository.findAll();
 		List<user> sortedusers=users.stream().sorted(Comparator.comparing(user::getUserName)).collect(Collectors.toList());
 		return sortedusers;
-	
 		
 	}
 }
