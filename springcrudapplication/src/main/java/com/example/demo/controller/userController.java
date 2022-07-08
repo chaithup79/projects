@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,11 +38,14 @@ public class userController {
 		return service.saveUser(user);
 
 	}
-	
+
 	@PutMapping("/user/{id}")
-	public user updateUser(@PathVariable("id") int id, @RequestBody userDTO userDTO)
-	{
-	 return service.updateUser(id, userDTO);
+	public user updateUser(@PathVariable("id") int id, @RequestBody userDTO userDTO) {
+		return service.updateUser(id, userDTO);
 	}
 
+	@GetMapping("/user/username")
+	public List<user> getUserByUsername() {
+		return service.getUSerByUsername();
+	}
 }
